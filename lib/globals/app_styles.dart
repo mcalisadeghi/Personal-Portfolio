@@ -9,4 +9,12 @@ class AppTextStyles {
       color: Colors.white,
     );
   }
+
+  static TextStyle montserratStyle() {
+    return GoogleFonts.montserrat(
+      color: Colors.white,
+      fontWeight: FontWeight.bold,
+      fontSize: 24.0,
+    );
+  }
 }
