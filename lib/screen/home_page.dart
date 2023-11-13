@@ -9,6 +9,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: AppColors.bgColor,
       appBar: AppBar(
         toolbarHeight: 90.0,
         titleSpacing: 100,
