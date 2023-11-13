@@ -7,6 +7,7 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 90.0,
@@ -56,10 +57,10 @@ class MyHomePage extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.only(
-          top: 60.0,
-          left: 60.0,
-          right: 60.0,
+        padding: EdgeInsets.only(
+          top: size.height * 0.3,
+          left: size.height * 0.2,
+          right: size.height * 0.2,
         ),
         child: Column(
           children: [
@@ -75,6 +76,10 @@ class MyHomePage extends StatelessWidget {
                     Text(
                       'MC Ali S',
                       style: AppTextStyles.headingStyles(),
+                    ),
+                    Text(
+                      'And I\'am a Flutter Developer',
+                      style: AppTextStyles.montserratStyle(),
                     ),
                   ],
                 ),

@@ -13,7 +13,7 @@ class AppTextStyles {
   static TextStyle montserratStyle() {
     return GoogleFonts.montserrat(
       color: Colors.white,
-      fontWeight: FontWeight.bold,
+      fontWeight: FontWeight.w800,
       fontSize: 24.0,
     );
   }
