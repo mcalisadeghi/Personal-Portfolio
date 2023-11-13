@@ -19,33 +19,33 @@ class MyHomePage extends StatelessWidget {
               'Portfolio',
               style: AppTextStyles.headerTextStyle(),
             ),
-            Spacer(),
+            const Spacer(),
             Text(
               'Home',
               style: AppTextStyles.headerTextStyle(),
             ),
-            SizedBox(
+            const SizedBox(
               width: 30.0,
             ),
             Text(
               'About',
               style: AppTextStyles.headerTextStyle(),
             ),
-            SizedBox(
+            const SizedBox(
               width: 30.0,
             ),
             Text(
               'Services',
               style: AppTextStyles.headerTextStyle(),
             ),
-            SizedBox(
+            const SizedBox(
               width: 30.0,
             ),
             Text(
               'Portfolio',
               style: AppTextStyles.headerTextStyle(),
             ),
-            SizedBox(
+            const SizedBox(
               width: 30.0,
             ),
             Text(
@@ -55,16 +55,33 @@ class MyHomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: Column(
-        children: [
-          Row(
-            children: [
-              Column(
-                children: [],
-              ),
-            ],
-          ),
-        ],
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.only(
+          top: 60.0,
+          left: 60.0,
+          right: 60.0,
+        ),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Hello, It\'s Me',
+                      style: AppTextStyles.montserratStyle(),
+                    ),
+                    Text(
+                      'MC Ali S',
+                      style: AppTextStyles.headingStyles(),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
