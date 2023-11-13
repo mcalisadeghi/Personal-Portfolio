@@ -10,12 +10,20 @@ class AppTextStyles {
     );
   }
 
-// https://www.youtube.com/watch?v=Ag_sdnSZolA
   static TextStyle montserratStyle() {
     return GoogleFonts.montserrat(
       color: Colors.white,
       fontWeight: FontWeight.bold,
       fontSize: 24.0,
+    );
+  }
+
+  static TextStyle headingStyles() {
+    return GoogleFonts.rubikMonoOne(
+      fontSize: 36.0,
+      fontWeight: FontWeight.bold,
+      color: Colors.white,
+      letterSpacing: 2.0,
     );
   }
 }
