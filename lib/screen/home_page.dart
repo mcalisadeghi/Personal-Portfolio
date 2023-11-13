@@ -242,10 +242,8 @@ class MyHomePage extends StatelessWidget {
         onTap: () {},
         child: Image.asset(
           iconAssets,
-          width: 10.0,
-          height: 12.0,
-          color: AppColors.themeColor,
-          fit: BoxFit.fill,
+          width: 10.0, height: 12.0, color: AppColors.bgColor,
+          // fit: BoxFit.fill,
         ),
       ),
     );
