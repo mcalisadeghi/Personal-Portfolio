@@ -144,20 +144,56 @@ class MyHomePage extends StatelessWidget {
                         buildSocialbutton(
                           iconAssets: AppAssets.facebook,
                         ),
+                        Constants.sizedBox(
+                          width: 12.0,
+                        ),
                         buildSocialbutton(
                           iconAssets: AppAssets.github,
+                        ),
+                        Constants.sizedBox(
+                          width: 12.0,
                         ),
                         buildSocialbutton(
                           iconAssets: AppAssets.linkeddIn,
                         ),
+                        Constants.sizedBox(
+                          width: 12.0,
+                        ),
                         buildSocialbutton(
                           iconAssets: AppAssets.instagram,
+                        ),
+                        Constants.sizedBox(
+                          width: 12.0,
                         ),
                         buildSocialbutton(
                           iconAssets: AppAssets.twitter,
                         ),
                       ],
-                    )
+                    ),
+                    Constants.sizedBox(
+                      height: 18.0,
+                    ),
+                    MaterialButton(
+                      onPressed: () {},
+                      color: AppColors.themeColor,
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 22.0,
+                        vertical: 10.0,
+                      ),
+                      shape: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(
+                          10.0,
+                        ),
+                      ),
+                      hoverColor: AppColors.aqua,
+                      elevation: 6,
+                      height: 55.0,
+                      minWidth: 130.0,
+                      child: Text(
+                        'Download CV',
+                        style: AppTextStyles.headerTextStyle(),
+                      ),
+                    ),
                   ],
                 ),
               ],
@@ -168,14 +204,22 @@ class MyHomePage extends StatelessWidget {
     );
   }
 
-  CircleAvatar buildSocialbutton({required String iconAssets}) {
+  CircleAvatar buildSocialbutton({
+    required String iconAssets,
+  }) {
     return CircleAvatar(
-      maxRadius: 22.0,
+      maxRadius: 20.0,
       backgroundColor: AppColors.themeColor,
-      child: Image.asset(
-        iconAssets,
-        width: 24.0,
-        height: 20.0,
+      child: CircleAvatar(
+        maxRadius: 18,
+        backgroundColor: AppColors.bgColor,
+        child: Image.asset(
+          iconAssets,
+          width: 20.0,
+          height: 24.0,
+          color: AppColors.themeColor,
+          fit: BoxFit.contain,
+        ),
       ),
     );
   }
