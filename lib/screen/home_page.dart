@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/globals/app_assets.dart';
 import 'package:flutter_application_1/globals/app_colors.dart';
 import 'package:flutter_application_1/globals/app_styles.dart';
 import 'package:flutter_application_1/globals/constants.dart';
@@ -140,9 +141,20 @@ class MyHomePage extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        CircleAvatar(
-                          maxRadius: 22.0,
-                          backgroundColor: AppColors.themeColor,
+                        buildSocialbutton(
+                          iconAssets: AppAssets.facebook,
+                        ),
+                        buildSocialbutton(
+                          iconAssets: AppAssets.github,
+                        ),
+                        buildSocialbutton(
+                          iconAssets: AppAssets.linkeddIn,
+                        ),
+                        buildSocialbutton(
+                          iconAssets: AppAssets.instagram,
+                        ),
+                        buildSocialbutton(
+                          iconAssets: AppAssets.twitter,
                         ),
                       ],
                     )
@@ -152,6 +164,18 @@ class MyHomePage extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  CircleAvatar buildSocialbutton({required String iconAssets}) {
+    return CircleAvatar(
+      maxRadius: 22.0,
+      backgroundColor: AppColors.themeColor,
+      child: Image.asset(
+        iconAssets,
+        width: 24.0,
+        height: 20.0,
       ),
     );
   }
