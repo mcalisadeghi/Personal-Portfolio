@@ -173,27 +173,7 @@ class MyHomePage extends StatelessWidget {
                     Constants.sizedBox(
                       height: 18.0,
                     ),
-                    MaterialButton(
-                      onPressed: () {},
-                      color: AppColors.themeColor,
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 22.0,
-                        vertical: 10.0,
-                      ),
-                      shape: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(
-                          10.0,
-                        ),
-                      ),
-                      hoverColor: AppColors.aqua,
-                      elevation: 6,
-                      height: 55.0,
-                      minWidth: 130.0,
-                      child: Text(
-                        'Download CV',
-                        style: AppTextStyles.headerTextStyle(),
-                      ),
-                    ),
+                    buildMaterialButton(),
                   ],
                 ),
               ],
@@ -204,21 +184,64 @@ class MyHomePage extends StatelessWidget {
     );
   }
 
-  CircleAvatar buildSocialbutton({
+  MaterialButton buildMaterialButton() {
+    return MaterialButton(
+      onPressed: () {},
+      color: AppColors.themeColor,
+      splashColor: AppColors.lawGreen,
+      padding: EdgeInsets.symmetric(
+        horizontal: 22.0,
+        vertical: 10.0,
+      ),
+      shape: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(
+          30.0,
+        ),
+        borderSide: BorderSide.none,
+      ),
+      hoverColor: AppColors.aqua,
+      elevation: 6,
+      height: 46.0,
+      minWidth: 130.0,
+      focusElevation: 12.0,
+      child: Text(
+        'Download CV',
+        style: AppTextStyles.headerTextStyle(),
+      ),
+    );
+  }
+
+  Ink buildSocialbutton({
     required String iconAssets,
   }) {
-    return CircleAvatar(
-      maxRadius: 20.0,
-      backgroundColor: AppColors.themeColor,
-      child: CircleAvatar(
-        maxRadius: 18,
-        backgroundColor: AppColors.bgColor,
+    return Ink(
+      width: 45.0,
+      height: 45.0,
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: AppColors.themeColor,
+          width: 2.0,
+        ),
+        color: AppColors.themeColor,
+        shape: BoxShape.circle,
+      ),
+      padding: EdgeInsets.all(
+        6.0,
+      ),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(
+          500.0,
+        ),
+        radius: 50.0,
+        splashColor: AppColors.lawGreen,
+        hoverColor: AppColors.aqua,
+        onTap: () {},
         child: Image.asset(
           iconAssets,
-          width: 20.0,
-          height: 24.0,
+          width: 10.0,
+          height: 12.0,
           color: AppColors.themeColor,
-          fit: BoxFit.contain,
+          fit: BoxFit.fill,
         ),
       ),
     );
