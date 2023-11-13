@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/globals/app_colors.dart';
 import 'package:flutter_application_1/globals/app_styles.dart';
+import 'package:flutter_application_1/globals/constants.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -74,9 +76,15 @@ class MyHomePage extends StatelessWidget {
                       'Hello, It\'s Me',
                       style: AppTextStyles.montserratStyle(),
                     ),
+                    Constants.sizedBox(
+                      height: 15.0,
+                    ),
                     Text(
                       'MC Ali S',
                       style: AppTextStyles.headingStyles(),
+                    ),
+                    Constants.sizedBox(
+                      height: 15.0,
                     ),
                     Text(
                       'And I\'am a Flutter Developer',
