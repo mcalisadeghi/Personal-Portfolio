@@ -30,10 +30,10 @@ class AppTextStyles {
   }
 
   static TextStyle normalStayle() {
-    return GoogleFonts.mukta(
-      fontSize: 16.0,
-      fontWeight: FontWeight.w500,
-      color: Colors.white,
-    );
+    return GoogleFonts.signikaNegative(
+        fontSize: 17.0,
+        fontWeight: FontWeight.w500,
+        color: Colors.white,
+        letterSpacing: 1.0);
   }
 }
