@@ -63,8 +63,8 @@ class MyHomePage extends StatelessWidget {
       body: SingleChildScrollView(
         padding: EdgeInsets.only(
           top: size.height * 0.3,
-          left: size.height * 0.2,
-          right: size.height * 0.2,
+          left: size.height * 0.1,
+          right: size.height * 0.1,
         ),
         child: Column(
           children: [
@@ -173,7 +173,9 @@ class MyHomePage extends StatelessWidget {
                     Constants.sizedBox(
                       height: 18.0,
                     ),
-                    buildMaterialButton(),
+                    buildMaterialButton(
+                      onTap: () {},
+                    ),
                   ],
                 ),
               ],
@@ -184,12 +186,14 @@ class MyHomePage extends StatelessWidget {
     );
   }
 
-  MaterialButton buildMaterialButton() {
+  MaterialButton buildMaterialButton({
+    required VoidCallback onTap,
+  }) {
     return MaterialButton(
-      onPressed: () {},
+      onPressed: onTap,
       color: AppColors.themeColor,
       splashColor: AppColors.lawGreen,
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
         horizontal: 22.0,
         vertical: 10.0,
       ),
@@ -225,7 +229,7 @@ class MyHomePage extends StatelessWidget {
         color: AppColors.themeColor,
         shape: BoxShape.circle,
       ),
-      padding: EdgeInsets.all(
+      padding: const EdgeInsets.all(
         6.0,
       ),
       child: InkWell(
