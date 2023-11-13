@@ -138,6 +138,14 @@ class MyHomePage extends StatelessWidget {
                     Constants.sizedBox(
                       height: 22.0,
                     ),
+                    Row(
+                      children: [
+                        CircleAvatar(
+                          maxRadius: 22.0,
+                          backgroundColor: AppColors.themeColor,
+                        ),
+                      ],
+                    )
                   ],
                 ),
               ],
