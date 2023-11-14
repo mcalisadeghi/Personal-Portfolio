@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/globals/app_assets.dart';
+import 'package:flutter_application_1/globals/app_button.dart';
 import 'package:flutter_application_1/globals/app_colors.dart';
 import 'package:flutter_application_1/globals/app_styles.dart';
 import 'package:flutter_application_1/globals/constants.dart';
@@ -70,8 +71,14 @@ class AboutMe extends StatelessWidget {
                 Constants.sizedBox(
                   height: 15.0,
                 ),
-                MaterialButton(
-                  onPressed: () {},
+                FadeInUp(
+                  duration: const Duration(
+                    milliseconds: 1800,
+                  ),
+                  child: AppButtons.buildMaterialButton(
+                    onTap: () {},
+                    buttonName: 'Download CV',
+                  ),
                 ),
               ],
             ),

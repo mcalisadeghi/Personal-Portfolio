@@ -3,8 +3,9 @@ import 'package:flutter_application_1/globals/app_colors.dart';
 import 'package:flutter_application_1/globals/app_styles.dart';
 
 class AppButtons {
-  MaterialButton buildMaterialButton({
+  static MaterialButton buildMaterialButton({
     required VoidCallback onTap,
+    required String buttonName,
   }) {
     return MaterialButton(
       onPressed: onTap,
@@ -26,7 +27,7 @@ class AppButtons {
       minWidth: 130.0,
       focusElevation: 12.0,
       child: Text(
-        'Download CV',
+        buttonName,
         style: AppTextStyles.headerTextStyle(),
       ),
     );

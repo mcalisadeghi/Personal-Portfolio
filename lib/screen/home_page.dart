@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/globals/app_assets.dart';
+import 'package:flutter_application_1/globals/app_button.dart';
 import 'package:flutter_application_1/globals/app_colors.dart';
 import 'package:flutter_application_1/globals/app_styles.dart';
 import 'package:flutter_application_1/globals/constants.dart';
@@ -209,8 +210,9 @@ class MyHomePage extends StatelessWidget {
                       duration: const Duration(
                         milliseconds: 1800,
                       ),
-                      child: buildMaterialButton(
+                      child: AppButtons.buildMaterialButton(
                         onTap: () {},
+                        buttonName: 'Download CV',
                       ),
                     ),
                   ],
