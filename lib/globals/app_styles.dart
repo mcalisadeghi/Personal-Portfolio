@@ -34,7 +34,7 @@ class AppTextStyles {
   }
 
   static TextStyle normalStayle() {
-    return TextStyle(
+    return const TextStyle(
       fontSize: 17.0,
       fontWeight: FontWeight.w500,
       color: Colors.white,
