@@ -5,6 +5,7 @@ import 'package:flutter_application_1/globals/app_styles.dart';
 import 'package:flutter_application_1/globals/constants.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:animate_do/animate_do.dart';
+import 'package:flutter_application_1/widgets/profile_animateion.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -63,15 +64,17 @@ class MyHomePage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.only(
-          top: size.height * 0.3,
+          top: size.height * 0.05,
           left: size.height * 0.1,
           right: size.height * 0.1,
         ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -211,10 +214,11 @@ class MyHomePage extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
-                  width: 20.0,
-                ),
+                const ProfileAnimation(),
               ],
+            ),
+            const SizedBox(
+              height: 400.0,
             ),
           ],
         ),
