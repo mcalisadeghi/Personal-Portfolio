@@ -221,7 +221,7 @@ class MyHomePage extends StatelessWidget {
             const SizedBox(
               height: 220.0,
             ),
-            AboutMe(),
+            const AboutMe(),
           ],
         ),
       ),
