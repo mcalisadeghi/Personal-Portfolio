@@ -6,9 +6,15 @@ import 'package:flutter_application_1/globals/app_colors.dart';
 import 'package:flutter_application_1/globals/app_styles.dart';
 import 'package:flutter_application_1/globals/constants.dart';
 
-class MyServices extends StatelessWidget {
+class MyServices extends StatefulWidget {
   const MyServices({super.key});
 
+  @override
+  State<MyServices> createState() => _MyServicesState();
+}
+
+class _MyServicesState extends State<MyServices> {
+  bool isHover = false;
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
@@ -50,9 +56,16 @@ class MyServices extends StatelessWidget {
           ),
           Row(
             children: [
-              buildAnimatedContainer(
-                title: 'App Development',
-                asset: AppAssets.github,
+              InkWell(
+                onTap: () {},
+                onHover: (bool value) {
+                  isHover = value;
+                },
+                child: buildAnimatedContainer(
+                  title: 'App Development',
+                  asset: AppAssets.github,
+                  hover: isHover,
+                ),
               ),
               Constants.sizedBox(
                 width: 18.0,
@@ -60,6 +73,7 @@ class MyServices extends StatelessWidget {
               buildAnimatedContainer(
                 title: 'Graphic Designing',
                 asset: AppAssets.instagram,
+                hover: isHover,
               ),
               Constants.sizedBox(
                 width: 18.0,
@@ -67,6 +81,7 @@ class MyServices extends StatelessWidget {
               buildAnimatedContainer(
                 title: 'Digital Marketing',
                 asset: AppAssets.facebook,
+                hover: isHover,
               ),
             ],
           ),
@@ -78,13 +93,14 @@ class MyServices extends StatelessWidget {
   AnimatedContainer buildAnimatedContainer({
     required String title,
     required String asset,
+    required bool hover,
   }) {
     return AnimatedContainer(
       duration: const Duration(
         microseconds: 600,
       ),
-      width: 400.0,
-      height: 450.0,
+      width: hover ? 400.0 : 390,
+      height: hover ? 440.0 : 430,
       alignment: Alignment.center,
       padding: const EdgeInsets.symmetric(
         horizontal: 18.0,
