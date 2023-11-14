@@ -16,4 +16,7 @@ class AppColors {
   static Color bgColor2 = const Color(
     0xff006D6F,
   );
+  static Color rabinEdgeBlue = const Color(
+    0xff00CCCC,
+  );
 }

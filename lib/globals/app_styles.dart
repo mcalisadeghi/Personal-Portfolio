@@ -20,11 +20,14 @@ class AppTextStyles {
     );
   }
 
-  static TextStyle headingStyles() {
+  static TextStyle headingStyles({
+    double fontSize = 36.0,
+    Color color = Colors.white,
+  }) {
     return GoogleFonts.rubikMonoOne(
-      fontSize: 36.0,
+      fontSize: fontSize,
       fontWeight: FontWeight.bold,
-      color: Colors.white,
+      color: color,
       letterSpacing: 2.0,
     );
   }

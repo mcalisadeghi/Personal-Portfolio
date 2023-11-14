@@ -29,11 +29,16 @@ class AboutMe extends StatelessWidget {
                 child: RichText(
                   text: TextSpan(
                     text: 'About',
-                    style: AppTextStyles.headingStyles(),
+                    style: AppTextStyles.headingStyles(
+                      fontSize: 30.0,
+                    ),
                     children: [
                       TextSpan(
                         text: 'Me',
-                        style: AppTextStyles.headingStyles(),
+                        style: AppTextStyles.headingStyles(
+                          fontSize: 30.0,
+                          color: AppColors.rabinEdgeBlue,
+                        ),
                       ),
                     ],
                   ),
