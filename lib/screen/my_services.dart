@@ -1,7 +1,9 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/globals/app_assets.dart';
 import 'package:flutter_application_1/globals/app_colors.dart';
 import 'package:flutter_application_1/globals/app_styles.dart';
+import 'package:flutter_application_1/globals/constants.dart';
 
 class MyServices extends StatelessWidget {
   const MyServices({super.key});
@@ -15,19 +17,19 @@ class MyServices extends StatelessWidget {
       color: AppColors.bgColor,
       child: Column(
         children: [
-          FadeInRight(
+          FadeInDown(
             duration: const Duration(
               milliseconds: 1200,
             ),
             child: RichText(
               text: TextSpan(
-                text: 'About',
+                text: 'My',
                 style: AppTextStyles.headingStyles(
                   fontSize: 30.0,
                 ),
                 children: [
                   TextSpan(
-                    text: 'Me',
+                    text: 'Services',
                     style: AppTextStyles.headingStyles(
                       fontSize: 30.0,
                       color: AppColors.rabinEdgeBlue,
@@ -35,6 +37,33 @@ class MyServices extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
+          ),
+          Constants.sizedBox(
+            height: 40.0,
+          ),
+          AnimatedContainer(
+            duration: Duration(
+              microseconds: 600,
+            ),
+            child: Column(
+              children: [
+                Image.asset(
+                  AppAssets.github,
+                  width: 50.0,
+                  height: 50.0,
+                  color: AppColors.themeColor,
+                ),
+                Constants.sizedBox(
+                  height: 30.0,
+                ),
+                Text(
+                  'App Development',
+                  style: AppTextStyles.montserratStyle(
+                    color: Colors.white,
+                  ),
+                ),
+              ],
             ),
           ),
         ],

@@ -7,6 +7,7 @@ import 'package:flutter_application_1/globals/constants.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter_application_1/screen/about_me.dart';
+import 'package:flutter_application_1/screen/my_services.dart';
 import 'package:flutter_application_1/widgets/profile_animateion.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -224,37 +225,9 @@ class MyHomePage extends StatelessWidget {
               height: 220.0,
             ),
             const AboutMe(),
+            const MyServices(),
           ],
         ),
-      ),
-    );
-  }
-
-  MaterialButton buildMaterialButton({
-    required VoidCallback onTap,
-  }) {
-    return MaterialButton(
-      onPressed: onTap,
-      color: AppColors.themeColor,
-      splashColor: AppColors.lawGreen,
-      padding: const EdgeInsets.symmetric(
-        horizontal: 22.0,
-        vertical: 10.0,
-      ),
-      shape: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(
-          30.0,
-        ),
-        borderSide: BorderSide.none,
-      ),
-      hoverColor: AppColors.aqua,
-      elevation: 6,
-      height: 46.0,
-      minWidth: 130.0,
-      focusElevation: 12.0,
-      child: Text(
-        'Download CV',
-        style: AppTextStyles.headerTextStyle(),
       ),
     );
   }
