@@ -15,15 +15,22 @@ class AboutMe extends StatelessWidget {
     return Container(
       height: size.height,
       color: AppColors.bgColor2,
+      alignment: Alignment.center,
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Image.asset(
-            AppAssets.prof2,
-            height: 450.0,
-            width: 400.0,
+          FadeInLeft(
+            duration: const Duration(
+              microseconds: 1200,
+            ),
+            child: Image.asset(
+              AppAssets.prof2,
+              height: 450.0,
+              width: 400.0,
+            ),
           ),
           Constants.sizedBox(
-            width: 22.0,
+            width: 25.0,
           ),
           Expanded(
             child: Column(
@@ -32,7 +39,7 @@ class AboutMe extends StatelessWidget {
               children: [
                 FadeInRight(
                   duration: const Duration(
-                    milliseconds: 1400,
+                    milliseconds: 1200,
                   ),
                   child: RichText(
                     text: TextSpan(
@@ -55,18 +62,28 @@ class AboutMe extends StatelessWidget {
                 Constants.sizedBox(
                   height: 6.0,
                 ),
-                Text(
-                  'Flutter Developer',
-                  style: AppTextStyles.montserratStyle(
-                    color: Colors.white,
+                FadeInLeft(
+                  duration: const Duration(
+                    microseconds: 1400,
+                  ),
+                  child: Text(
+                    'Flutter Developer',
+                    style: AppTextStyles.montserratStyle(
+                      color: Colors.white,
+                    ),
                   ),
                 ),
                 Constants.sizedBox(
                   height: 8.0,
                 ),
-                Text(
-                  'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum',
-                  style: AppTextStyles.normalStayle(),
+                FadeInLeft(
+                  duration: const Duration(
+                    microseconds: 1600,
+                  ),
+                  child: Text(
+                    'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum',
+                    style: AppTextStyles.normalStayle(),
+                  ),
                 ),
                 Constants.sizedBox(
                   height: 15.0,
@@ -77,7 +94,7 @@ class AboutMe extends StatelessWidget {
                   ),
                   child: AppButtons.buildMaterialButton(
                     onTap: () {},
-                    buttonName: 'Download CV',
+                    buttonName: 'Read More',
                   ),
                 ),
               ],
