@@ -37,6 +37,6 @@ class AppTextStyles {
         fontSize: 17.0,
         fontWeight: FontWeight.w500,
         color: Colors.white,
-        letterSpacing: 1.0);
+        letterSpacing: 1.5);
   }
 }
