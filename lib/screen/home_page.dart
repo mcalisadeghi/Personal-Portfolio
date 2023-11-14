@@ -4,6 +4,7 @@ import 'package:flutter_application_1/globals/app_colors.dart';
 import 'package:flutter_application_1/globals/app_styles.dart';
 import 'package:flutter_application_1/globals/constants.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:animate_do/animate_do.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -73,108 +74,138 @@ class MyHomePage extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      'Hello, It\'s Me',
-                      style: AppTextStyles.montserratStyle(
-                        color: Colors.white,
+                    FadeInDown(
+                      duration: const Duration(
+                        milliseconds: 1200,
+                      ),
+                      child: Text(
+                        'Hello, It\'s Me',
+                        style: AppTextStyles.montserratStyle(
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                     Constants.sizedBox(
                       height: 15.0,
                     ),
-                    Text(
-                      'MC Ali S',
-                      style: AppTextStyles.headingStyles(),
-                    ),
-                    Constants.sizedBox(
-                      height: 15.0,
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          'And I\'am a',
-                          style: AppTextStyles.montserratStyle(
-                            color: Colors.white,
-                          ),
-                        ),
-                        AnimatedTextKit(
-                          animatedTexts: [
-                            TyperAnimatedText(
-                              'Flutter Developer',
-                              textStyle: AppTextStyles.montserratStyle(
-                                color: Colors.lightBlue,
-                              ),
-                            ),
-                            TyperAnimatedText(
-                              'ّFreelancer',
-                              textStyle: AppTextStyles.montserratStyle(
-                                color: Colors.lightBlue,
-                              ),
-                            ),
-                            TyperAnimatedText(
-                              'Gamer Dota2',
-                              textStyle: AppTextStyles.montserratStyle(
-                                color: Colors.lightBlue,
-                              ),
-                            ),
-                          ], // totalRepeatCount: 4,
-                          pause: const Duration(
-                            milliseconds: 1000,
-                          ),
-                          displayFullTextOnTap: true,
-                          stopPauseOnTap: true,
-                        ),
-                      ],
-                    ),
-                    Constants.sizedBox(
-                      height: 15.0,
-                    ),
-                    SizedBox(
-                      width: size.width * 0.5,
+                    FadeInRight(
+                      duration: const Duration(
+                        milliseconds: 1400,
+                      ),
                       child: Text(
-                        'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document ',
-                        style: AppTextStyles.normalStayle(),
+                        'MC Ali S',
+                        style: AppTextStyles.headingStyles(),
+                      ),
+                    ),
+                    Constants.sizedBox(
+                      height: 15.0,
+                    ),
+                    FadeInLeft(
+                      duration: const Duration(
+                        milliseconds: 1400,
+                      ),
+                      child: Row(
+                        children: [
+                          Text(
+                            'And I\'am a',
+                            style: AppTextStyles.montserratStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                          AnimatedTextKit(
+                            animatedTexts: [
+                              TyperAnimatedText(
+                                'Flutter Developer',
+                                textStyle: AppTextStyles.montserratStyle(
+                                  color: Colors.lightBlue,
+                                ),
+                              ),
+                              TyperAnimatedText(
+                                'ّFreelancer',
+                                textStyle: AppTextStyles.montserratStyle(
+                                  color: Colors.lightBlue,
+                                ),
+                              ),
+                              TyperAnimatedText(
+                                'Gamer Dota2',
+                                textStyle: AppTextStyles.montserratStyle(
+                                  color: Colors.lightBlue,
+                                ),
+                              ),
+                            ], // totalRepeatCount: 4,
+                            pause: const Duration(
+                              milliseconds: 1000,
+                            ),
+                            displayFullTextOnTap: true,
+                            stopPauseOnTap: true,
+                          ),
+                        ],
+                      ),
+                    ),
+                    Constants.sizedBox(
+                      height: 15.0,
+                    ),
+                    FadeInDown(
+                      duration: const Duration(
+                        milliseconds: 1600,
+                      ),
+                      child: SizedBox(
+                        width: size.width * 0.5,
+                        child: Text(
+                          'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document ',
+                          style: AppTextStyles.normalStayle(),
+                        ),
                       ),
                     ),
                     Constants.sizedBox(
                       height: 22.0,
                     ),
-                    Row(
-                      children: [
-                        buildSocialbutton(
-                          iconAssets: AppAssets.facebook,
-                        ),
-                        Constants.sizedBox(
-                          width: 12.0,
-                        ),
-                        buildSocialbutton(
-                          iconAssets: AppAssets.github,
-                        ),
-                        Constants.sizedBox(
-                          width: 12.0,
-                        ),
-                        buildSocialbutton(
-                          iconAssets: AppAssets.linkeddIn,
-                        ),
-                        Constants.sizedBox(
-                          width: 12.0,
-                        ),
-                        buildSocialbutton(
-                          iconAssets: AppAssets.instagram,
-                        ),
-                        Constants.sizedBox(
-                          width: 12.0,
-                        ),
-                        buildSocialbutton(
-                          iconAssets: AppAssets.twitter,
-                        ),
-                      ],
+                    FadeInUp(
+                      duration: const Duration(
+                        milliseconds: 1600,
+                      ),
+                      child: Row(
+                        children: [
+                          buildSocialbutton(
+                            iconAssets: AppAssets.facebook,
+                          ),
+                          Constants.sizedBox(
+                            width: 12.0,
+                          ),
+                          buildSocialbutton(
+                            iconAssets: AppAssets.github,
+                          ),
+                          Constants.sizedBox(
+                            width: 12.0,
+                          ),
+                          buildSocialbutton(
+                            iconAssets: AppAssets.linkeddIn,
+                          ),
+                          Constants.sizedBox(
+                            width: 12.0,
+                          ),
+                          buildSocialbutton(
+                            iconAssets: AppAssets.instagram,
+                          ),
+                          Constants.sizedBox(
+                            width: 12.0,
+                          ),
+                          buildSocialbutton(
+                            iconAssets: AppAssets.twitter,
+                          ),
+                        ],
+                      ),
                     ),
                     Constants.sizedBox(
                       height: 18.0,
                     ),
-                    buildMaterialButton(
-                      onTap: () {},
+                    FadeInUp(
+                      duration: const Duration(
+                        milliseconds: 1800,
+                      ),
+                      child: buildMaterialButton(
+                        onTap: () {},
+                      ),
                     ),
                   ],
                 ),
