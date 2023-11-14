@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/globals/app_colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppTextStyles {
@@ -33,10 +34,19 @@ class AppTextStyles {
   }
 
   static TextStyle normalStayle() {
-    return GoogleFonts.signikaNegative(
-        fontSize: 17.0,
-        fontWeight: FontWeight.w500,
-        color: Colors.white,
-        letterSpacing: 1.5);
+    return TextStyle(
+      fontSize: 17.0,
+      fontWeight: FontWeight.w500,
+      color: Colors.white,
+      letterSpacing: 1.7,
+    );
+  }
+
+  static TextStyle comfortaaStayle() {
+    return GoogleFonts.comfortaa(
+      fontSize: 18.0,
+      fontWeight: FontWeight.w800,
+      color: AppColors.bgColor,
+    );
   }
 }
