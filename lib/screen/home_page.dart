@@ -70,6 +70,8 @@ class MyHomePage extends StatelessWidget {
         child: Column(
           children: [
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -208,6 +210,9 @@ class MyHomePage extends StatelessWidget {
                       ),
                     ),
                   ],
+                ),
+                SizedBox(
+                  width: 20.0,
                 ),
               ],
             ),
