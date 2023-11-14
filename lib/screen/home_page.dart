@@ -5,6 +5,7 @@ import 'package:flutter_application_1/globals/app_styles.dart';
 import 'package:flutter_application_1/globals/constants.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:animate_do/animate_do.dart';
+import 'package:flutter_application_1/screen/about_me.dart';
 import 'package:flutter_application_1/widgets/profile_animateion.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -65,8 +66,8 @@ class MyHomePage extends StatelessWidget {
       body: SingleChildScrollView(
         padding: EdgeInsets.only(
           top: size.height * 0.05,
-          left: size.height * 0.1,
-          right: size.height * 0.1,
+          // left: size.height * 0.1,
+          // right: size.height * 0.1,
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -218,8 +219,9 @@ class MyHomePage extends StatelessWidget {
               ],
             ),
             const SizedBox(
-              height: 400.0,
+              height: 220.0,
             ),
+            AboutMe(),
           ],
         ),
       ),
