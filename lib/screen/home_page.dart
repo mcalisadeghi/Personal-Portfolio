@@ -160,7 +160,7 @@ class MyHomePage extends StatelessWidget {
                       child: SizedBox(
                         width: size.width * 0.5,
                         child: Text(
-                          'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document ',
+                          'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a documentgraphic design, Lorem ipsum is a placeholder graphic design, Lorem ipsum is a placeholder  ',
                           style: AppTextStyles.normalStayle(),
                         ),
                       ),

@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/globals/app_assets.dart';
+import 'package:flutter_application_1/globals/app_button.dart';
 import 'package:flutter_application_1/globals/app_colors.dart';
 import 'package:flutter_application_1/globals/app_styles.dart';
 import 'package:flutter_application_1/globals/constants.dart';
@@ -46,6 +47,7 @@ class MyServices extends StatelessWidget {
             duration: Duration(
               microseconds: 600,
             ),
+            width: 450.0,
             child: Column(
               children: [
                 Image.asset(
@@ -62,6 +64,20 @@ class MyServices extends StatelessWidget {
                   style: AppTextStyles.montserratStyle(
                     color: Colors.white,
                   ),
+                ),
+                Constants.sizedBox(
+                  height: 12.0,
+                ),
+                Text(
+                  'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document ',
+                  style: AppTextStyles.normalStayle(),
+                ),
+                Constants.sizedBox(
+                  height: 12.0,
+                ),
+                AppButtons.buildMaterialButton(
+                  onTap: () {},
+                  buttonName: 'Read More',
                 ),
               ],
             ),
