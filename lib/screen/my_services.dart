@@ -14,7 +14,19 @@ class MyServices extends StatefulWidget {
 }
 
 class _MyServicesState extends State<MyServices> {
-  bool isHover = false;
+  bool isApp = false, isGraphic = false, isDataAnalyst = false;
+  final onHoverActive = Matrix4.identity()
+    ..translate(
+      0,
+      -10,
+      0,
+    );
+  final onHoverRemove = Matrix4.identity()
+    ..translate(
+      0,
+      -10,
+      0,
+    );
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
@@ -62,7 +74,7 @@ class _MyServicesState extends State<MyServices> {
                 onHover: (bool value) {
                   setState(
                     () {
-                      isHover = value;
+                      isApp = value;
                     },
                   );
                 },
@@ -70,24 +82,44 @@ class _MyServicesState extends State<MyServices> {
                 child: buildAnimatedContainer(
                   title: 'App Development',
                   asset: AppAssets.github,
-                  hover: isHover,
+                  hover: isApp,
                 ),
               ),
               Constants.sizedBox(
                 width: 18.0,
               ),
-              buildAnimatedContainer(
-                title: 'Graphic Designing',
-                asset: AppAssets.instagram,
-                hover: isHover,
+              InkWell(
+                onTap: () {},
+                onHover: (bool value) {
+                  setState(
+                    () {
+                      isGraphic = value;
+                    },
+                  );
+                },
+                child: buildAnimatedContainer(
+                  title: 'Graphic Designing',
+                  asset: AppAssets.instagram,
+                  hover: isGraphic,
+                ),
               ),
               Constants.sizedBox(
                 width: 18.0,
               ),
-              buildAnimatedContainer(
-                title: 'Digital Marketing',
-                asset: AppAssets.facebook,
-                hover: isHover,
+              InkWell(
+                onTap: () {},
+                onHover: (bool value) {
+                  setState(
+                    () {
+                      isDataAnalyst = value;
+                    },
+                  );
+                },
+                child: buildAnimatedContainer(
+                  title: 'Digital Marketing',
+                  asset: AppAssets.facebook,
+                  hover: isDataAnalyst,
+                ),
               ),
             ],
           ),
@@ -117,6 +149,12 @@ class _MyServicesState extends State<MyServices> {
         borderRadius: BorderRadius.circular(
           30.0,
         ),
+        border: hover
+            ? Border.all(
+                color: AppColors.themeColor,
+                width: 2.0,
+              )
+            : null,
         boxShadow: const [
           BoxShadow(
             color: Colors.black54,
