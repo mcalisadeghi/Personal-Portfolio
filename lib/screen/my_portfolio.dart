@@ -18,10 +18,6 @@ class _MyPortfolioState extends State<MyPortfolio> {
     AppAssets.facebook,
     AppAssets.facebook,
     AppAssets.facebook,
-    AppAssets.facebook,
-    AppAssets.facebook,
-    AppAssets.facebook,
-    AppAssets.facebook,
   ];
   @override
   Widget build(BuildContext context) {
@@ -77,7 +73,7 @@ class _MyPortfolioState extends State<MyPortfolio> {
                 image: AssetImage(
                   image,
                 ),
-              );
+              ); //20:06
             },
           )
         ],
