@@ -7,6 +7,7 @@ import 'package:flutter_application_1/globals/constants.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter_application_1/screen/about_me.dart';
+import 'package:flutter_application_1/screen/my_portfolio.dart';
 import 'package:flutter_application_1/screen/my_services.dart';
 import 'package:flutter_application_1/widgets/profile_animateion.dart';
 
@@ -226,6 +227,7 @@ class MyHomePage extends StatelessWidget {
             ),
             const AboutMe(),
             const MyServices(),
+            MyPortfolio(),
           ],
         ),
       ),
