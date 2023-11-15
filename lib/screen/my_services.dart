@@ -140,6 +140,7 @@ class _MyServicesState extends State<MyServices> {
       width: hover ? 400.0 : 390,
       height: hover ? 440.0 : 430,
       alignment: Alignment.center,
+      transform: hover ? onHoverActive : onHoverRemove,
       padding: const EdgeInsets.symmetric(
         horizontal: 18.0,
         vertical: 24.0,
