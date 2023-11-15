@@ -55,12 +55,18 @@ class _MyServicesState extends State<MyServices> {
             height: 60.0,
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               InkWell(
                 onTap: () {},
                 onHover: (bool value) {
-                  isHover = value;
+                  setState(
+                    () {
+                      isHover = value;
+                    },
+                  );
                 },
+                hoverColor: Colors.white,
                 child: buildAnimatedContainer(
                   title: 'App Development',
                   asset: AppAssets.github,
