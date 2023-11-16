@@ -13,11 +13,12 @@ class AppTextStyles {
 
   static TextStyle montserratStyle({
     required Color color,
+    double fontSize = 24.0,
   }) {
     return GoogleFonts.montserrat(
       color: color,
       fontWeight: FontWeight.w800,
-      fontSize: 24.0,
+      fontSize: fontSize,
     );
   }
 
@@ -33,12 +34,15 @@ class AppTextStyles {
     );
   }
 
-  static TextStyle normalStayle() {
-    return const TextStyle(
+  static TextStyle normalStayle({
+    Color color = Colors.white,
+  }) {
+    return TextStyle(
       fontSize: 17.0,
       fontWeight: FontWeight.w500,
-      color: Colors.white,
+      color: color,
       letterSpacing: 1.7,
+      height: 1.5,
     );
   }
 

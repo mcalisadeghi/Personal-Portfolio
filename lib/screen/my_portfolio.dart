@@ -14,11 +14,14 @@ class MyPortfolio extends StatefulWidget {
 
 class _MyPortfolioState extends State<MyPortfolio> {
   List images = <String>[
-    AppAssets.facebook,
-    AppAssets.facebook,
-    AppAssets.facebook,
-    AppAssets.facebook,
+    AppAssets.work1,
+    AppAssets.work2,
+    AppAssets.work1,
+    AppAssets.work2,
+    AppAssets.work1,
+    AppAssets.work2,
   ];
+  var hoveredIndex;
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
@@ -71,43 +74,82 @@ class _MyPortfolioState extends State<MyPortfolio> {
             ),
             itemBuilder: (BuildContext context, int index) {
               var image = images[index];
-              return Stack(
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(
-                      20.0,
-                    ),
-                    child: Image(
-                      image: AssetImage(
-                        image,
+              return FadeInUpBig(
+                duration: Duration(
+                  microseconds: 1600,
+                ),
+                child: InkWell(
+                  onTap: () {},
+                  onHover: (value) {
+                    setState(() {
+                      if (value) {
+                        hoveredIndex = index;
+                      }
+                    });
+                  },
+                  child: Stack(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(
+                          20.0,
+                        ),
+                        child: Image(
+                          image: AssetImage(
+                            image,
+                          ),
+                          fit: BoxFit.fill,
+                        ),
                       ),
-                      fit: BoxFit.fill,
-                    ),
+                      Visibility(
+                        visible: index == hoveredIndex,
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 14.0,
+                            vertical: 16.0,
+                          ),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(
+                              20.0,
+                            ),
+                            gradient: LinearGradient(
+                              colors: <Color>[
+                                AppColors.themeColor.withOpacity(
+                                  1.0,
+                                ),
+                                AppColors.themeColor.withOpacity(
+                                  0.9,
+                                ),
+                                AppColors.themeColor.withOpacity(
+                                  0.8,
+                                ),
+                                AppColors.themeColor.withOpacity(
+                                  0.6,
+                                ),
+                              ],
+                              begin: Alignment.bottomCenter,
+                              end: Alignment.topCenter,
+                            ),
+                          ),
+                          child: Column(
+                            children: [
+                              Text(
+                                'App Developer',
+                                style: AppTextStyles.montserratStyle(
+                                  color: Colors.black87,
+                                  fontSize: 20.0,
+                                ),
+                              ),
+                              Text(
+                                'ipsum is a placeholder text commonly used to demonstrate the visual form of a documentgraphic design, Lorem ipsu',
+                                style: AppTextStyles.normalStayle(),
+                              ),
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(
-                        20.0,
-                      ),
-                      gradient: LinearGradient(
-                        colors: [
-                          AppColors.themeColor.withOpacity(
-                            1.0,
-                          ),
-                          AppColors.themeColor.withOpacity(
-                            0.9,
-                          ),
-                          AppColors.themeColor.withOpacity(
-                            0.8,
-                          ),
-                          AppColors.themeColor.withOpacity(
-                            0.6,
-                          ),
-                        ],
-                      ),
-                    ),
-                  )
-                ],
+                ),
               ); //20:06
             },
           )
