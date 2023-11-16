@@ -23,10 +23,10 @@ class _MyPortfolioState extends State<MyPortfolio> {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Container(
-      // alignment: Alignment.center,
-      padding: const EdgeInsets.symmetric(
+      alignment: Alignment.center,
+      padding: EdgeInsets.symmetric(
         vertical: 30.0,
-        horizontal: 12.0,
+        horizontal: size.width * 0.1,
       ),
       width: size.width,
       height: size.height,
@@ -89,8 +89,21 @@ class _MyPortfolioState extends State<MyPortfolio> {
                       borderRadius: BorderRadius.circular(
                         20.0,
                       ),
-                      color: AppColors.themeColor.withOpacity(
-                        0.6,
+                      gradient: LinearGradient(
+                        colors: [
+                          AppColors.themeColor.withOpacity(
+                            1.0,
+                          ),
+                          AppColors.themeColor.withOpacity(
+                            0.9,
+                          ),
+                          AppColors.themeColor.withOpacity(
+                            0.8,
+                          ),
+                          AppColors.themeColor.withOpacity(
+                            0.6,
+                          ),
+                        ],
                       ),
                     ),
                   )
