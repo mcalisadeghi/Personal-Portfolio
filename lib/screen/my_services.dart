@@ -81,7 +81,7 @@ class _MyServicesState extends State<MyServices> {
                 hoverColor: Colors.white,
                 child: buildAnimatedContainer(
                   title: 'App Development',
-                  asset: AppAssets.github,
+                  asset: AppAssets.coding,
                   hover: isApp,
                 ),
               ),
@@ -99,7 +99,7 @@ class _MyServicesState extends State<MyServices> {
                 },
                 child: buildAnimatedContainer(
                   title: 'Graphic Designing',
-                  asset: AppAssets.instagram,
+                  asset: AppAssets.brushstroke,
                   hover: isGraphic,
                 ),
               ),
@@ -117,7 +117,7 @@ class _MyServicesState extends State<MyServices> {
                 },
                 child: buildAnimatedContainer(
                   title: 'Digital Marketing',
-                  asset: AppAssets.facebook,
+                  asset: AppAssets.analytics,
                   hover: isDataAnalyst,
                 ),
               ),

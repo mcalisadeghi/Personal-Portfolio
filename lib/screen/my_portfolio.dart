@@ -13,6 +13,7 @@ class MyPortfolio extends StatefulWidget {
 }
 
 class _MyPortfolioState extends State<MyPortfolio> {
+  final onHoverEffect = Matrix4.identity()..scale(1.0);
   List images = <String>[
     AppAssets.work1,
     AppAssets.work2,
@@ -68,19 +69,19 @@ class _MyPortfolioState extends State<MyPortfolio> {
             physics: const NeverScrollableScrollPhysics(),
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 3,
-              mainAxisExtent: 280,
+              mainAxisExtent: 248.0, //280,
               mainAxisSpacing: 24.0,
               crossAxisSpacing: 24.0,
             ),
             itemBuilder: (BuildContext context, int index) {
               var image = images[index];
               return FadeInUpBig(
-                duration: Duration(
+                duration: const Duration(
                   microseconds: 1600,
                 ),
                 child: InkWell(
                   onTap: () {},
-                  onHover: (value) {
+                  onHover: (bool value) {
                     setState(() {
                       if (value) {
                         hoveredIndex = index;
@@ -102,7 +103,12 @@ class _MyPortfolioState extends State<MyPortfolio> {
                       ),
                       Visibility(
                         visible: index == hoveredIndex,
-                        child: Container(
+                        child: AnimatedContainer(
+                          duration: const Duration(
+                            microseconds: 300,
+                          ),
+                          transform:
+                              index == hoveredIndex ? onHoverEffect : null,
                           padding: const EdgeInsets.symmetric(
                             horizontal: 14.0,
                             vertical: 16.0,
