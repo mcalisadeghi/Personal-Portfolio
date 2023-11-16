@@ -227,7 +227,7 @@ class MyHomePage extends StatelessWidget {
             ),
             const AboutMe(),
             const MyServices(),
-            MyPortfolio(),
+            const MyPortfolio(),
           ],
         ),
       ),

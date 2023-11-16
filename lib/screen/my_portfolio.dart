@@ -65,14 +65,36 @@ class _MyPortfolioState extends State<MyPortfolio> {
             physics: const NeverScrollableScrollPhysics(),
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 3,
-              mainAxisExtent: 200,
+              mainAxisExtent: 280,
+              mainAxisSpacing: 24.0,
+              crossAxisSpacing: 24.0,
             ),
             itemBuilder: (BuildContext context, int index) {
               var image = images[index];
-              return Image(
-                image: AssetImage(
-                  image,
-                ),
+              return Stack(
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(
+                      20.0,
+                    ),
+                    child: Image(
+                      image: AssetImage(
+                        image,
+                      ),
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(
+                        20.0,
+                      ),
+                      color: AppColors.themeColor.withOpacity(
+                        0.6,
+                      ),
+                    ),
+                  )
+                ],
               ); //20:06
             },
           )
